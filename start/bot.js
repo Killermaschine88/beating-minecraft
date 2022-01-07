@@ -5,7 +5,7 @@ function startMinecraftBot() {
   const bot = mineflayer.createBot({
     host: 'ybaltraz.aternos.me',
     port: '38196',
-    username: 'Test',
+    username: 'baltraz',
     version: '1.8.9'
   })
 

@@ -1,12 +1,20 @@
-const { green, red } = require('colorette')
+const { green, red, yellow, white, gray } = require('colorette')
 const { fixMinecraftMessage } = require('./misc.js')
 
 function infoLog(text) {
-  console.log(green('[Info] ') + fixMinecraftMessage(text))
+  console.log(green('[INFO] ') + fixMinecraftMessage(text))
 }
 
 function errorLog(text) {
   console.log(red('[ERROR] ') + fixMinecraftMessage(text))
 }
 
-module.exports = { infoLog, errorLog }
+function warnLog(text) {
+  console.log(yellow('[WARN] ') + fixMinecraftMessage(text))
+}
+
+function messageLog(text) {
+  console.log(gray('[MESSAGE] ') + fixMinecraftMessage(text))
+}
+
+module.exports = { infoLog, errorLog, warnLog, messageLog }

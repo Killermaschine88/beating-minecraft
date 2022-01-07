@@ -4,6 +4,7 @@ const { infoLog } = require('../../constants/functions/logging.js')
 module.exports = {
   name: "spawn",
   async execute(bot) {
-    infoLog(mineflayerViewer(bot, { port: 3000, firstPerson: false }))
+    mineflayerViewer(bot, { port: 3000, firstPerson: false, distance: 3 })
+    infoLog('Logged into the Server')
   }
 }
