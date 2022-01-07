@@ -1,0 +1,10 @@
+# Replit Files
+.replit
+replit.nix
+.config
+
+# Node Modules
+node_modules/
+
+# NPM Files
+package-lock.json
