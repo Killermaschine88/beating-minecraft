@@ -7,7 +7,8 @@ function startMinecraftBot() {
     host,
     port,
     username,
-    version
+    version,
+    renderDistance: 'tiny'
   })
 
   //Various Dependencies
@@ -15,6 +16,8 @@ function startMinecraftBot() {
 
   //Plugins
   bot.loadPlugin(require('mineflayer-collectblock').plugin)
+  bot.loadPlugin(require('mineflayer-tool').plugin)
+  bot.loadPlugin(require('mineflayer-pathfinder').pathfinder)
 
   return bot
 }

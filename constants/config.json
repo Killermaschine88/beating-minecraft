@@ -3,5 +3,7 @@
   "port": "38196",
   "username": "baltraz",
   "version": "1.8.9",
-  "mineBlockChannel": "929296945565007872"
+  "mineBlockChannel": "929296945565007872",
+  "gotoChannel": "929355437827039273",
+  "attackChannel": "929369205348892713"
 }

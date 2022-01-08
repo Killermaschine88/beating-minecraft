@@ -1,26 +1,32 @@
 const { infoLog } = require('./log.js')
+let i = 0
 
-function mineBlock(block) {
+async function mineBlock(amount, block) {
 
   if(!block) infoLog(`No block to mine. / Stopped.`)
+  if(i >= amount) {
+    i = 0
+    infoLog('Stopped', 'MINE')
+    return
+  }
 
   const block_to_mine = bot.findBlock({
     matching: block.id,
-    maxDistance: 64
+    maxDistance: 32
   })
 
-  console.log(block_to_mine)
-
   if(!block_to_mine) return
+  
+  await bot.tool.equipForBlock(block_to_mine, {}).catch(e => {})
 
     bot.collectBlock.collect(block_to_mine, err => {
       if (err) {
         console.log(err)
       } else {
-        infoLog(`${block}`, 'MINED')
-        mineBlock(block)
+        infoLog(`${block.displayName}`, 'MINE')
+        i++
+        mineBlock(amount, block)
       }
-      
     })
 }
 
