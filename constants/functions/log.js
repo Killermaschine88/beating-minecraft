@@ -1,8 +1,8 @@
 const { green, red, yellow, white, gray } = require('colorette')
 const { fixMinecraftMessage } = require('./misc.js')
 
-function infoLog(text) {
-  console.log(green('[INFO] ') + fixMinecraftMessage(text))
+function infoLog(text, tag = 'INFO') {
+  console.log(green(`[${tag}] `) + fixMinecraftMessage(text))
 }
 
 function errorLog(text) {

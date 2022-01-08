@@ -1,4 +1,4 @@
-const { infoLog } = require('../../constants/functions/logging.js')
+const { infoLog } = require('../../constants/functions/log.js')
 
 module.exports = {
   name: "login",
