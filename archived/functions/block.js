@@ -1,4 +1,4 @@
-const { infoLog } = require('./log.js')
+//const { infoLog } = require('./log.js')
 let i = 0
 
 async function mineBlock(amount, block) {
@@ -16,8 +16,9 @@ async function mineBlock(amount, block) {
   })
 
   if(!block_to_mine) return
-  
-  await bot.tool.equipForBlock(block_to_mine, {}).catch(e => {})
+  try {
+    await bot.tool.equipForBlock(block_to_mine, {})
+  } catch (e) {}
 
     bot.collectBlock.collect(block_to_mine, err => {
       if (err) {

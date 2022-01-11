@@ -18,6 +18,12 @@ function startMinecraftBot() {
   bot.loadPlugin(require('mineflayer-collectblock').plugin)
   bot.loadPlugin(require('mineflayer-tool').plugin)
   bot.loadPlugin(require('mineflayer-pathfinder').pathfinder)
+  bot.loadPlugin(require("mineflayer-auto-eat"))
+  bot.loadPlugin(require('mineflayer-armor-manager'))
+  bot.loadPlugin(require('mineflayer-pvp').plugin)
+
+  //Equip best armor
+  bot.armorManager.equipAll()
 
   return bot
 }

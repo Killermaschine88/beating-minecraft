@@ -5,12 +5,12 @@ function infoLog(text, tag = 'INFO') {
   console.log(green(`[${tag}] `) + fixMinecraftMessage(text))
 }
 
-function errorLog(text) {
-  console.log(red('[ERROR] ') + fixMinecraftMessage(text))
+function errorLog(text, tag = 'ERROR') {
+  console.log(red(`[${tag}] `) + fixMinecraftMessage(text))
 }
 
-function warnLog(text) {
-  console.log(yellow('[WARN] ') + fixMinecraftMessage(text))
+function warnLog(text, tag = 'WARN') {
+  console.log(yellow(`[${tag}] `) + fixMinecraftMessage(text))
 }
 
 function messageLog(text) {

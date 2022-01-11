@@ -19,7 +19,7 @@ for (const file of minecraftEventFiles) {
 
 
 //Getting Discord Bot Object and globally assign it
-global.client = startDiscordBot()
+/*global.client = startDiscordBot()
 
 //Discord Event handling
 const discordEventFiles = fs.readdirSync('./discord/events').filter((file) => file.endsWith('.js'));
@@ -31,4 +31,4 @@ for (const file of discordEventFiles) {
 	} else {
 		client.on(event.name, (...args) => event.execute(...args));
 	}
-}
+}*/
